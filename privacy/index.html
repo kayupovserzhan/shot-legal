@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHOT — Политика конфиденциальности / Privacy Policy</title>
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #151517;
+    --text: #f2f2f7;
+    --text-dim: #8e8e93;
+    --accent: #0a84ff;
+    --border: #2c2c2e;
+    --maxw: 720px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header.page {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 6px;
+  }
+  .meta {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+  }
+  .lang-switch {
+    margin: 18px 0 0;
+    font-size: 14px;
+  }
+  .lang-switch a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .lang-switch a:hover { text-decoration: underline; }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 32px 0 10px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 20px 0 8px;
+  }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+  strong { color: var(--text); }
+  .box {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  .placeholder {
+    color: var(--accent);
+    font-style: normal;
+  }
+  a { color: var(--accent); }
+  hr.section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0 36px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page">
+    <p class="brand">SHOT</p>
+    <h1>Политика конфиденциальности</h1>
+    <p class="meta">Дата вступления в силу: <span class="placeholder">[ДАТА]</span></p>
+    <p class="lang-switch"><a href="#en">English version ↓</a></p>
+  </header>
+
+  <main id="ru" lang="ru">
+    <p>
+      SHOT — мобильное приложение-ассистент фотографа, разработанное
+      <span class="placeholder">[ИМЯ РАЗРАБОТЧИКА / КОМПАНИИ]</span>.
+      Контакты по вопросам конфиденциальности:
+      <a href="mailto:privacy@example.com" class="placeholder">[EMAIL]</a>.
+    </p>
+
+    <h2>1. Аккаунт и email</h2>
+    <p>
+      При входе в приложение через email (одноразовый код) мы получаем ваш email,
+      уникальный идентификатор аккаунта и служебные токены сессии, необходимые
+      для того, чтобы вы оставались авторизованы. Эти данные обрабатывает
+      Supabase — наш провайдер аутентификации и базы данных.
+    </p>
+
+    <h2>2. Supabase</h2>
+    <p>
+      Supabase — наш backend-провайдер. Через него хранятся данные вашего
+      аккаунта и сохранённое оборудование, а также работают серверные функции
+      приложения (в том числе AI-функции, см. ниже). Supabase выступает нашим
+      техническим подрядчиком (processor) для предоставления функциональности
+      приложения, а не независимым получателем ваших данных для собственных целей.
+    </p>
+
+    <h2>3. Оборудование фотографа</h2>
+    <p>
+      Если вы добавляете камеры, объективы, вспышки или осветители в разделе
+      «Моё оборудование», эти данные (категория, бренд, модель — текстом)
+      сохраняются в вашем аккаунте в Supabase, а также кэшируются локально на
+      устройстве для быстрого доступа.
+    </p>
+
+    <h2>4. Locale Projects (съёмки) — только на устройстве</h2>
+    <p>
+      Ваши Projects (съёмки), включая название, заметки, план кадров и
+      прогресс, <strong>хранятся только локально</strong> на вашем устройстве.
+      Мы не передаём и не храним эти данные на своих серверах — они существуют
+      и работают даже без входа в аккаунт и никогда нами не синхронизируются.
+    </p>
+
+    <h2>5. Кастомные референс-фото</h2>
+    <p>
+      Если вы выбираете собственное референс-фото для кадра, оно сохраняется
+      только локально на вашем устройстве (в файловой системе приложения).
+      Мы никогда не передаём эти изображения на сервер и не используем их
+      ни в одной AI-функции — обе AI-функции приложения работают только с текстом.
+    </p>
+
+    <h2>6. AI Photographer и AI Assist</h2>
+    <p>
+      Когда вы используете «AI Photographer» или «AI Assist во время съёмки»,
+      часть введённого вами текста передаётся через наш сервер стороннему
+      AI-провайдеру, OpenAI, чтобы сгенерировать ответ:
+    </p>
+    <ul>
+      <li>ваш вопрос и уточняющий диалог (AI Photographer);</li>
+      <li>заметка о проблеме на съёмке, условия съёмки (место/время/освещение),
+        выбранное для этой конкретной съёмки оборудование и содержание
+        текущего кадра из каталога SHOT (AI Assist);</li>
+      <li>если вы вошли в аккаунт — бренд и модель вашего сохранённого
+        оборудования (без имени, email или идентификатора аккаунта).</li>
+    </ul>
+    <p>
+      Мы <strong>никогда</strong> не отправляем в OpenAI ваш email,
+      идентификатор аккаунта, название или заметки вашего проекта, изображения.
+    </p>
+    <p>
+      Мы не сохраняем содержимое этих запросов на своих серверах — только
+      служебные метрики (длина текста, число попыток, стоимость запроса),
+      без самого текста.
+    </p>
+
+    <h2>7. Обработка данных через OpenAI</h2>
+    <div class="box">
+      <p>
+        По умолчанию OpenAI не использует данные, переданные через API, для
+        обучения своих моделей. Для целей выявления злоупотреблений
+        (abuse-monitoring) OpenAI может хранить содержимое запроса
+        ограниченный период — как правило, до 30 дней — если иное отдельно
+        не согласовано (например, Zero Data Retention или Modified Abuse
+        Monitoring). На сегодняшний день мы не подтверждаем наличие такого
+        отдельного соглашения для SHOT. Актуальную политику обработки и
+        хранения данных OpenAI см. в
+        <a href="https://openai.com/policies" target="_blank" rel="noopener">официальной политике OpenAI</a>.
+      </p>
+    </div>
+
+    <h2>8. Защита от злоупотреблений (IP-хэш)</h2>
+    <p>
+      Чтобы ограничивать частоту запросов к AI-функциям и защищаться от
+      злоупотреблений, мы храним криптографический хэш (HMAC) вашего
+      IP-адреса — не сам IP-адрес — привязанный к короткому временному окну.
+      Этот хэш не связан с вашим аккаунтом, email или любыми другими
+      персональными данными.
+    </p>
+
+    <h2>9. Сколько мы храним данные (retention)</h2>
+    <ul>
+      <li>Данные аккаунта и сохранённое оборудование — до тех пор, пока вы не удалите аккаунт.</li>
+      <li>Локальные Projects и референс-фото — до тех пор, пока вы не удалите их сами или не удалите приложение.</li>
+      <li>Содержимое AI-запросов — не хранится нами после обработки запроса (см. раздел 7 про OpenAI отдельно).</li>
+      <li>Хэши IP-адресов для rate limiting — хранятся ограниченное время для защиты сервиса.</li>
+    </ul>
+
+    <h2>10. Удаление аккаунта</h2>
+    <p>
+      Вы можете удалить свой аккаунт в приложении:
+      <strong>Профиль → Удалить аккаунт</strong>.
+    </p>
+    <p><strong>Удаляется безвозвратно:</strong></p>
+    <ul>
+      <li>ваш аккаунт SHOT и email;</li>
+      <li>сохранённое в профиле оборудование.</li>
+    </ul>
+    <p><strong>Остаётся на вашем устройстве после удаления аккаунта:</strong></p>
+    <ul>
+      <li>ваши Projects и история съёмок;</li>
+      <li>добавленные вами референс-фото.</li>
+    </ul>
+    <p>
+      Это связано с тем, что эти данные технически не связаны с аккаунтом и
+      хранятся только локально. Вы можете удалить их отдельно, вручную, прямо
+      в приложении (в разделе Library и на экране проекта) в любой момент,
+      независимо от наличия аккаунта.
+    </p>
+    <p>
+      Если у вас больше нет доступа к приложению, вы можете запросить
+      удаление аккаунта на странице
+      <a href="../delete-account/">delete-account</a>.
+    </p>
+
+    <h2>11. Ваши права</h2>
+    <p>
+      Вы можете запросить доступ к своим данным, их исправление или удаление,
+      написав на <span class="placeholder">[EMAIL]</span>.
+    </p>
+
+    <h2>12. Изменения политики</h2>
+    <p>
+      Мы можем обновлять эту политику. Дата последнего обновления указана в начале документа.
+    </p>
+
+    <h2>13. Контакты</h2>
+    <p>
+      По любым вопросам о конфиденциальности: <span class="placeholder">[EMAIL]</span>.
+    </p>
+  </main>
+
+  <hr class="section-divider">
+
+  <main id="en" lang="en">
+    <p class="lang-switch"><a href="#ru">↑ Русская версия</a></p>
+    <h1>SHOT Privacy Policy</h1>
+    <p class="meta">Effective date: <span class="placeholder">[DATE]</span></p>
+
+    <p>
+      SHOT is a mobile photography-assistant app developed by
+      <span class="placeholder">[DEVELOPER / COMPANY NAME]</span>.
+      Privacy contact: <a href="mailto:privacy@example.com" class="placeholder">[EMAIL]</a>.
+    </p>
+
+    <h2>1. Account and email</h2>
+    <p>
+      When you sign in by email (one-time code), we receive your email
+      address, a unique account identifier, and session tokens needed to
+      keep you signed in. This is handled by Supabase, our authentication
+      and database provider.
+    </p>
+
+    <h2>2. Supabase</h2>
+    <p>
+      Supabase is our backend provider. It stores your account data and
+      saved equipment, and runs the app's server functions (including the
+      AI features below). Supabase acts as our processor to provide app
+      functionality, not as an independent recipient of your data for its
+      own purposes.
+    </p>
+
+    <h2>3. Photographer equipment</h2>
+    <p>
+      If you add cameras, lenses, flashes, or continuous lights under
+      "My Equipment", this text (category, brand, model) is saved to your
+      account in Supabase and cached locally on your device for fast access.
+    </p>
+
+    <h2>4. Local Projects (shoots) — on-device only</h2>
+    <p>
+      Your Projects (shoots), including title, notes, shot plan, and
+      progress, are <strong>stored only locally</strong> on your device.
+      We do not transmit or store this data on our servers — it exists and
+      works even without signing in, and is never synced by us.
+    </p>
+
+    <h2>5. Custom reference photos</h2>
+    <p>
+      If you pick your own reference photo for a shot, it is saved only
+      locally on your device (in the app's own file storage). We never
+      transmit these images to our server, and neither AI feature ever
+      processes images — both are text-only.
+    </p>
+
+    <h2>6. AI Photographer and AI Assist</h2>
+    <p>
+      When you use "AI Photographer" or "AI Assist during a shoot", part of
+      your text input is sent through our server to a third-party AI
+      provider, OpenAI, to generate a response:
+    </p>
+    <ul>
+      <li>your question and any follow-up clarification (AI Photographer);</li>
+      <li>a note about a problem on set, shoot conditions (location/time/lighting),
+        the equipment selected for that specific shoot, and the current
+        catalog Shot's own content (AI Assist);</li>
+      <li>if you're signed in, the brand and model of your saved equipment
+        (never your name, email, or account ID).</li>
+    </ul>
+    <p>
+      We <strong>never</strong> send your email, account ID, project title
+      or notes, or images to OpenAI.
+    </p>
+    <p>
+      We do not store the content of these requests on our own servers —
+      only operational metrics (text length, retry count, request cost),
+      never the text itself.
+    </p>
+
+    <h2>7. Data processing via OpenAI</h2>
+    <div class="box">
+      <p>
+        By default, OpenAI does not use data submitted through its API to
+        train its models. For abuse-monitoring purposes, OpenAI may retain
+        request content for a limited period — typically up to 30 days —
+        unless a separate agreement is in place (such as Zero Data
+        Retention or Modified Abuse Monitoring). We do not currently
+        confirm such a separate agreement for SHOT. See
+        <a href="https://openai.com/policies" target="_blank" rel="noopener">OpenAI's own policy</a>
+        for their current data handling and retention practices.
+      </p>
+    </div>
+
+    <h2>8. Abuse protection (IP hash)</h2>
+    <p>
+      To rate-limit AI feature usage and protect against abuse, we store a
+      cryptographic hash (HMAC) of your IP address — not the raw IP —
+      tied to a short time window. This hash is not linked to your account,
+      email, or any other personal data.
+    </p>
+
+    <h2>9. Retention</h2>
+    <ul>
+      <li>Account data and saved equipment — until you delete your account.</li>
+      <li>Local Projects and reference photos — until you delete them yourself or uninstall the app.</li>
+      <li>AI request content — not retained by us after the request is processed (see section 7 for OpenAI specifically).</li>
+      <li>IP hashes for rate limiting — retained for a limited time to protect the service.</li>
+    </ul>
+
+    <h2>10. Account deletion</h2>
+    <p>
+      You can delete your account in-app: <strong>Profile → Delete account</strong>.
+    </p>
+    <p><strong>Permanently deleted:</strong></p>
+    <ul>
+      <li>your SHOT account and email;</li>
+      <li>equipment saved to your profile.</li>
+    </ul>
+    <p><strong>Stays on your device after account deletion:</strong></p>
+    <ul>
+      <li>your Projects and shoot history;</li>
+      <li>reference photos you added.</li>
+    </ul>
+    <p>
+      This is because that data is not technically tied to your account and
+      only ever lived locally. You can delete it separately, manually,
+      in-app (Library and the project screen) at any time, regardless of
+      whether you have an account.
+    </p>
+    <p>
+      If you no longer have access to the app, you can request account
+      deletion on the <a href="../delete-account/">delete-account</a> page.
+    </p>
+
+    <h2>11. Your rights</h2>
+    <p>
+      You can request access to, correction of, or deletion of your data by
+      writing to <span class="placeholder">[EMAIL]</span>.
+    </p>
+
+    <h2>12. Changes</h2>
+    <p>We may update this policy. The date at the top reflects the last update.</p>
+
+    <h2>13. Contact</h2>
+    <p>For any privacy questions: <span class="placeholder">[EMAIL]</span>.</p>
+  </main>
+
+  <footer>
+    SHOT — <span class="placeholder">[DOMAIN]</span>/privacy
+  </footer>
+
+</div>
+</body>
+</html>
