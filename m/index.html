@@ -188,8 +188,23 @@
 
   // Filled in at deploy time — the real deployed resolve-shared-moodboard
   // Edge Function URL. This page is static (no build step, no env vars),
-  // so this is the one line that must be edited before publishing.
+  // so this is one of the two lines that must be edited before publishing.
   var RESOLVE_URL = 'https://ejoybkmuayonhefjmkpf.supabase.co/functions/v1/resolve-shared-moodboard';
+
+  // Supabase Edge Functions require a valid Authorization header to pass
+  // the PLATFORM's own gateway JWT check, before the function's own code
+  // ever runs — this is enforced above/outside resolve-shared-moodboard's
+  // own handler, which itself never reads or checks this header (the
+  // handler's only real credential is the `token` in the POST body).
+  // Without it, every call fails with 401 "Missing authorization header"
+  // from the Supabase gateway itself (sb-error-code: UNAUTHORIZED_NO_AUTH_HEADER)
+  // — confirmed directly against this project's deployment. This mirrors
+  // exactly what the SHOT mobile app itself already does for every other
+  // Edge Function call (see src/services/aiPlanClient.ts etc.) — the anon
+  // key is a public, embeddable identifier by Supabase's own design, safe
+  // to ship in client code (mobile bundle or, here, a static public page),
+  // not a secret.
+  var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVqb3lia211YXlvbmhlZmpta3BmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxOTUzMTIsImV4cCI6MjEwMTc3MTMxMn0.ui1qXn0RPi63aJferYZgtdJG6u5AzSJKqWnkLaKjmTk';
 
   var titleEl = document.getElementById('title');
   var stateEl = document.getElementById('state');
@@ -286,7 +301,10 @@
 
     fetch(RESOLVE_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + ANON_KEY,
+      },
       body: JSON.stringify({ token: token }),
     })
       .then(function (res) {
